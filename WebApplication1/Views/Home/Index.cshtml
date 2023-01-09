@@ -1,0 +1,26 @@
+﻿@using MyDataService.Models;
+@model  List<MyDataService.Models.Gubudik>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="color:violet";"witdh:50%">Here is the list of Gubidiks</h2>
+<table style="color:darkred">
+    <thead>
+        <tr>
+            <td>Album Id</td>
+            <td>Title</td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MyDataService.Models.Gubudik e in Model)
+        {
+            <tr>
+                <td>@e.AlbumId</td>
+                <td>@e.Title</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
